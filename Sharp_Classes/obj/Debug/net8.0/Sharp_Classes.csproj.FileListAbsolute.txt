@@ -1,0 +1,15 @@
+C:\Users\student\RiderProjects\Sharp_Classes\Sharp_Classes\bin\Debug\net8.0\Sharp_Classes.exe
+C:\Users\student\RiderProjects\Sharp_Classes\Sharp_Classes\bin\Debug\net8.0\Sharp_Classes.deps.json
+C:\Users\student\RiderProjects\Sharp_Classes\Sharp_Classes\bin\Debug\net8.0\Sharp_Classes.runtimeconfig.json
+C:\Users\student\RiderProjects\Sharp_Classes\Sharp_Classes\bin\Debug\net8.0\Sharp_Classes.dll
+C:\Users\student\RiderProjects\Sharp_Classes\Sharp_Classes\bin\Debug\net8.0\Sharp_Classes.pdb
+C:\Users\student\RiderProjects\Sharp_Classes\Sharp_Classes\obj\Debug\net8.0\Sharp_Classes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\student\RiderProjects\Sharp_Classes\Sharp_Classes\obj\Debug\net8.0\Sharp_Classes.AssemblyInfoInputs.cache
+C:\Users\student\RiderProjects\Sharp_Classes\Sharp_Classes\obj\Debug\net8.0\Sharp_Classes.AssemblyInfo.cs
+C:\Users\student\RiderProjects\Sharp_Classes\Sharp_Classes\obj\Debug\net8.0\Sharp_Classes.csproj.CoreCompileInputs.cache
+C:\Users\student\RiderProjects\Sharp_Classes\Sharp_Classes\obj\Debug\net8.0\Sharp_Classes.sourcelink.json
+C:\Users\student\RiderProjects\Sharp_Classes\Sharp_Classes\obj\Debug\net8.0\Sharp_Classes.dll
+C:\Users\student\RiderProjects\Sharp_Classes\Sharp_Classes\obj\Debug\net8.0\refint\Sharp_Classes.dll
+C:\Users\student\RiderProjects\Sharp_Classes\Sharp_Classes\obj\Debug\net8.0\Sharp_Classes.pdb
+C:\Users\student\RiderProjects\Sharp_Classes\Sharp_Classes\obj\Debug\net8.0\Sharp_Classes.genruntimeconfig.cache
+C:\Users\student\RiderProjects\Sharp_Classes\Sharp_Classes\obj\Debug\net8.0\ref\Sharp_Classes.dll
