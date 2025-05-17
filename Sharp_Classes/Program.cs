@@ -2,101 +2,73 @@
 
 class Program
 {
-    // Task 1
-    class Square
+    //Task 1
+    class Multiplication
     {
-        public static void DrawSquare(int sideLength, char symbol)
+        public static int GetProduct(int start, int end)
         {
-            for (int i = 0; i < sideLength; i++)
+            int product = 1;
+            for (int i = start; i <= end; i++)
             {
-                for (int j = 0; j < sideLength; j++)
-                {
-                    Console.Write(symbol);
-                }
-                Console.WriteLine();
+                product *= i;
             }
+            return product;
         }
     }
     //Task 2
-    class Palindrome
+    class CheckFibonacci
     {
-        public static bool IsPalindrome(int number)
+        public static bool IsFibonacci(int number)
         {
-            string strNumber = number.ToString();
-            char[] arr = strNumber.ToCharArray();
-            Array.Reverse(arr);
-            string reversedNumber = new string(arr);
-            return strNumber == reversedNumber;
+            int a = 0, b = 1, c = 0;
+            if (number == 0 || number == 1)
+                return true;
+            while (c < number)
+            {
+                c = a + b;
+                a = b;
+                b = c;
+            }
+            return c == number;
         }
     }
     //Task 3
-    class FilterArray
+    class SortingArray
     {
-        public static int[] Filter(int[] originalArray, int[] filterArray)
+        public static void SortArrayAscending(int[] array)
         {
-            List<int> result = new List<int>();
-            foreach (int item in originalArray)
+            Array.Sort(array);
+            Console.WriteLine("Sorted array in ascending order:");
+            foreach (int num in array)
             {
-                if (!filterArray.Contains(item))
-                {
-                    result.Add(item);
-                }
+                Console.Write(num + " ");
             }
-            return result.ToArray();
+
+            Console.WriteLine();
+        }
+
+        public static void SortArrayDescending(int[] array)
+        {
+            Array.Sort(array);
+            Array.Reverse(array);
+            Console.WriteLine("Sorted array in descending order:");
+            foreach (int num in array)
+            {
+                Console.Write(num + " ");
+            }
+
+            Console.WriteLine();
         }
     }
     //Task 4
-    class Website
+    class City
     {
         private string name;
-        private string path;
-        private string description;
-        private string ipAddress;
+        private string country;
+        private int population;
+        private int phoneCode;
+        private string nameArea;
 
-        public void SetName(string name) 
-        { 
-            this.name = name;
-        }
-        public string GetName()
-        {
-            return name;
-        }
-        public void SetPath(string path)
-        {
-            this.path = path;
-        }
-        public string GetPath()
-        {
-            return path;
-        }
-        public void SetDescription(string description)
-            {
-                this.description = description;
-            }
-
-        public string GetDescription()
-        { 
-            return description;
-        }
-
-        public void SetIpAddress(string ipAddress)
-        {
-            this.ipAddress = ipAddress;
-        }
-
-        public string GetIpAddress()
-        {
-            return ipAddress;
-        }
-    }
-    //Task 5
-    class Journal
-    {
-        private string name;
-        private int year;
-        private string description;
-        private string phone;
-        private string email;
         public void SetName(string name)
         {
             this.name = name;
@@ -104,6 +76,122 @@ class Program
         public string GetName()
         {
             return name;
+        }
+        public void SetCountry(string country)
+        {
+            this.country = country;
+        }
+        public string GetCountry()
+        {
+            return country;
+        }
+        public void SetPopulation(int population)
+        {
+            this.population = population;
+        }
+        public int GetPopulation()
+        {
+            return population;
+        }
+        public void SetPhoneCode(int phoneCode)
+        {
+            this.phoneCode = phoneCode;
+        }
+        public int GetPhoneCode()
+        {
+            return phoneCode;
+        }
+        public void SetNameArea(string nameArea)
+        {
+            this.nameArea = nameArea;
+        }
+        public string GetNameArea()
+        {
+            return nameArea;
+        }
+    }
+    //Task 5
+    class Worker
+    {
+        private string SurnameName;
+        private string birthDate;
+        private int contactNumber;
+        private string email;
+        private string position;
+        private int description;
+        
+        public void SetSurnameName(string surnameName)
+        {
+            SurnameName = surnameName;
+        }
+        public string GetSurnameName()
+        {
+            return SurnameName;
+        }
+        public void SetBirthDate(string birthDate)
+        {
+            this.birthDate = birthDate;
+        }
+        public string GetBirthDate()
+        {
+            return birthDate;
+        }
+        public void SetContactNumber(int contactNumber)
+        {
+            this.contactNumber = contactNumber;
+        }
+        public int GetContactNumber()
+        {
+            return contactNumber;
+        }
+        public void SetEmail(string email)
+        {
+            this.email = email;
+        }
+        public string GetEmail()
+        {
+            return email;
+        }
+        public void SetPosition(string position)
+        {
+            this.position = position;
+        }
+        public string GetPosition()
+        {
+            return position;
+        }
+        public void SetDescription(int description)
+        {
+            this.description = description;
+        }
+        public int GetDescription()
+        {
+            return description;
+        }
+    }
+    //Task 6 
+    class Plane
+    {
+        private string name;
+        private string companyName;
+        private int year;
+        private string type;
+        
+        public void SetName(string name)
+        {
+            this.name = name;
+        }
+        public string GetName()
+        {
+            return name;
+        }
+        public void SetCompanyName(string companyName)
+        {
+            this.companyName = companyName;
+        }
+        public string GetCompanyName()
+        {
+            return companyName;
         }
         public void SetYear(int year)
         {
@@ -113,167 +201,192 @@ class Program
         {
             return year;
         }
-        public void SetDescription(string description)
+        public void SetType(string type)
         {
-            this.description = description;
+            this.type = type;
         }
-        public string GetDescription()
+        public string GetType()
         {
-            return description;
-        }
-        public void SetPhone(string phone)
-        {
-            this.phone = phone;
-        }
-        public string GetPhone()
-        {
-            return phone;
-        }
-        public void SetEmail(string email)
-        {
-            this.email = email;
-        }
-        public string GetEmail()
-        {
-            return email;
+            return type;
         }
     }
-    //Task 6
-    class Shop
+    //Task 7
+    class Matrix
     {
-        private string name;
-        private string address;
-        private string description;
-        private string phone;
-        private string email;
-
-        public void SetName(string name)
+        private int[,] matrix;
+        private int rows;
+        private int cols;
+        public Matrix(int rows, int cols)
         {
-            this.name = name;
+            this.rows = rows;
+            this.cols = cols;
+            matrix = new int[rows, cols];
         }
-        public string GetName()
+        public void FillMatrix()
         {
-            return name;
+            Random rand = new Random();
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < cols; j++)
+                {
+                    matrix[i, j] = rand.Next(1, 100);
+                }
+            }
         }
-        public void SetAddress(string address)
+        public void PrintMatrix()
         {
-            this.address = address;
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < cols; j++)
+                {
+                    Console.Write(matrix[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
         }
-        public string GetAddress()
+        public int GetMax()
         {
-            return address;
+            int max = matrix[0, 0];
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < cols; j++)
+                {
+                    if (matrix[i, j] > max)
+                    {
+                        max = matrix[i, j];
+                    }
+                }
+            }
+            return max;
         }
-        public void SetDescription(string description)
+        public int GetMin()
         {
-            this.description = description;
-        }
-        public string GetDescription()
-        {
-            return description;
-        }
-        public void SetPhone(string phone)
-        {
-            this.phone = phone;
-        }
-        public string GetPhone()
-        {
-            return phone;
-        }
-        public void SetEmail(string email)
-        {
-            this.email = email;
-        }
-        public string GetEmail()
-        {
-            return email;
+            int min = matrix[0, 0];
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < cols; j++)
+                {
+                    if (matrix[i, j] < min)
+                    {
+                        min = matrix[i, j];
+                    }
+                }
+            }
+            return min;
         }
     }
     static void Main(string[] args)
     {
-        // Task 1
-        Console.WriteLine("Enter the side length of the square:");
-        int sideLength = int.Parse(Console.ReadLine());
-        Console.WriteLine("Enter the symbol to draw the square:");
-        char symbol = Console.ReadKey().KeyChar;
-        Console.WriteLine();
-        Square.DrawSquare(sideLength, symbol);
+        //Task 1
+        Console.WriteLine("Enter the start of the range:");
+        int start = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter the end of the range:");
+        int end = Convert.ToInt32(Console.ReadLine());
+        int product = Multiplication.GetProduct(start, end);
+        Console.WriteLine($"The product of numbers from {start} to {end} is: {product}");
         
-        // Task 2
-        Console.WriteLine("Enter a number to check if it's a palindrome:");
-        int number = int.Parse(Console.ReadLine());
-        bool isPalindrome = Palindrome.IsPalindrome(number);
-        if (isPalindrome)
+        //Task 2
+        Console.WriteLine("Enter the number to check if it's Fibonacci:");
+        int number = Convert.ToInt32(Console.ReadLine());
+        bool isFibonacci = CheckFibonacci.IsFibonacci(number);
+        if (isFibonacci)
         {
-            Console.WriteLine($"{number} is a palindrome.");
+            Console.WriteLine($"{number} is a Fibonacci number.");
         }
         else
         {
-            Console.WriteLine($"{number} is not a palindrome.");
+            Console.WriteLine($"{number} is not a Fibonacci number.");
         }
         
-        // Task 3
-        Console.WriteLine("Enter the original array (comma-separated):");
-        int[] originalArray = Console.ReadLine().Split(',').Select(int.Parse).ToArray();
-        Console.WriteLine("Enter the filter array (comma-separated):");
-        int[] filterArray = Console.ReadLine().Split(',').Select(int.Parse).ToArray();
-        int[] filteredArray = FilterArray.Filter(originalArray, filterArray);
-        Console.WriteLine("Filtered array:");
-        foreach (int item in filteredArray)
+        //Task 3
+        Console.WriteLine("Enter the size of the array:");
+        int size = Convert.ToInt32(Console.ReadLine());
+        int[] array = new int[size];
+        Console.WriteLine("Enter the elements of the array:");
+        for (int i = 0; i < size; i++)
         {
-            Console.Write(item + " ");
+            array[i] = Convert.ToInt32(Console.ReadLine());
         }
-        Console.WriteLine();
+        Console.WriteLine("Choose sorting order (1 for ascending, 2 for descending):");
+        int choice = Convert.ToInt32(Console.ReadLine());
+        if (choice == 1)
+        {
+            SortingArray.SortArrayAscending(array);
+        }
+        else if (choice == 2)
+        {
+            SortingArray.SortArrayDescending(array);
+        }
+        else
+        {
+            Console.WriteLine("Invalid choice.");
+        }
         
         //Task 4
-        Website website = new Website();
-        Console.WriteLine("Enter the website name:");
-        website.SetName(Console.ReadLine());
-        Console.WriteLine("Enter the website path:");
-        website.SetPath(Console.ReadLine());
-        Console.WriteLine("Enter the website description:");
-        website.SetDescription(Console.ReadLine());
-        Console.WriteLine("Enter the website IP address:");
-        website.SetIpAddress(Console.ReadLine());
-        Console.WriteLine($"Website Name: {website.GetName()}");
-        Console.WriteLine($"Website Path: {website.GetPath()}");
-        Console.WriteLine($"Website Description: {website.GetDescription()}");
-        Console.WriteLine($"Website IP Address: {website.GetIpAddress()}");
+        City city = new City();
+        Console.WriteLine("Enter city name:");
+        city.SetName(Console.ReadLine());
+        Console.WriteLine("Enter country name:");
+        city.SetCountry(Console.ReadLine());
+        Console.WriteLine("Enter population:");
+        city.SetPopulation(Convert.ToInt32(Console.ReadLine()));
+        Console.WriteLine("Enter phone code:");
+        city.SetPhoneCode(Convert.ToInt32(Console.ReadLine()));
+        Console.WriteLine("Enter area name:");
+        city.SetNameArea(Console.ReadLine());
+        Console.WriteLine($"City Name: {city.GetName()}");
+        Console.WriteLine($"Country: {city.GetCountry()}");
+        Console.WriteLine($"Population: {city.GetPopulation()}");
+        Console.WriteLine($"Phone Code: {city.GetPhoneCode()}");
+        Console.WriteLine($"Area Name: {city.GetNameArea()}");
         
-        // Task 5
-        Journal journal = new Journal();
-        Console.WriteLine("Enter the journal name:");
-        journal.SetName(Console.ReadLine());
-        Console.WriteLine("Enter the year of establishment:");
-        journal.SetYear(int.Parse(Console.ReadLine()));
-        Console.WriteLine("Enter the journal description:");
-        journal.SetDescription(Console.ReadLine());
-        Console.WriteLine("Enter the contact phone:");
-        journal.SetPhone(Console.ReadLine());
-        Console.WriteLine("Enter the email:");
-        journal.SetEmail(Console.ReadLine());
-        Console.WriteLine($"Journal Name: {journal.GetName()}");
-        Console.WriteLine($"Year of Establishment: {journal.GetYear()}");
-        Console.WriteLine($"Journal Description: {journal.GetDescription()}");
-        Console.WriteLine($"Contact Phone: {journal.GetPhone()}");
-        Console.WriteLine($"Email: {journal.GetEmail()}");
+        //Task 5
+        Worker worker = new Worker();
+        Console.WriteLine("Enter surname and name:");
+        worker.SetSurnameName(Console.ReadLine());
+        Console.WriteLine("Enter birth date:");
+        worker.SetBirthDate(Console.ReadLine());
+        Console.WriteLine("Enter contact number:");
+        worker.SetContactNumber(Convert.ToInt32(Console.ReadLine()));
+        Console.WriteLine("Enter email:");
+        worker.SetEmail(Console.ReadLine());
+        Console.WriteLine("Enter position:");
+        worker.SetPosition(Console.ReadLine());
+        Console.WriteLine("Enter description:");
+        worker.SetDescription(Convert.ToInt32(Console.ReadLine()));
+        Console.WriteLine($"Surname and Name: {worker.GetSurnameName()}");
+        Console.WriteLine($"Birth Date: {worker.GetBirthDate()}");
+        Console.WriteLine($"Contact Number: {worker.GetContactNumber()}");
+        Console.WriteLine($"Email: {worker.GetEmail()}");
+        Console.WriteLine($"Position: {worker.GetPosition()}");
+        Console.WriteLine($"Description: {worker.GetDescription()}");
         
         //Task 6
-        Shop shop = new Shop();
-        Console.WriteLine("Enter the shop name:");
-        shop.SetName(Console.ReadLine());
-        Console.WriteLine("Enter the shop address:");
-        shop.SetAddress(Console.ReadLine());
-        Console.WriteLine("Enter the shop description:");
-        shop.SetDescription(Console.ReadLine());
-        Console.WriteLine("Enter the contact phone:");
-        shop.SetPhone(Console.ReadLine());
-        Console.WriteLine("Enter the email:");
-        shop.SetEmail(Console.ReadLine());
-        Console.WriteLine($"Shop Name: {shop.GetName()}");
-        Console.WriteLine($"Shop Address: {shop.GetAddress()}");
-        Console.WriteLine($"Shop Description: {shop.GetDescription()}");
-        Console.WriteLine($"Contact Phone: {shop.GetPhone()}");
-        Console.WriteLine($"Email: {shop.GetEmail()}");
+        Plane plane = new Plane();
+        Console.WriteLine("Enter plane name:");
+        plane.SetName(Console.ReadLine());
+        Console.WriteLine("Enter company name:");
+        plane.SetCompanyName(Console.ReadLine());
+        Console.WriteLine("Enter year of manufacture:");
+        plane.SetYear(Convert.ToInt32(Console.ReadLine()));
+        Console.WriteLine("Enter type of plane:");
+        plane.SetType(Console.ReadLine());
+        Console.WriteLine($"Plane Name: {plane.GetName()}");
+        Console.WriteLine($"Company Name: {plane.GetCompanyName()}");
+        Console.WriteLine($"Year of Manufacture: {plane.GetYear()}");
+        Console.WriteLine($"Type of Plane: {plane.GetType()}");
+        
+        //Task 7
+        Console.WriteLine("Enter number of rows in the matrix:");
+        int rows = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter number of columns in the matrix:");
+        int cols = Convert.ToInt32(Console.ReadLine());
+        Matrix matrix = new Matrix(rows, cols);
+        matrix.FillMatrix();
+        Console.WriteLine("Matrix:");
+        matrix.PrintMatrix();
+        Console.WriteLine($"Maximum value in the matrix: {matrix.GetMax()}");
+        Console.WriteLine($"Minimum value in the matrix: {matrix.GetMin()}");
         
     }
 }
